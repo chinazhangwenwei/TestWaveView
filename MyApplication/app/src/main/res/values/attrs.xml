@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyWaveView">
+        <attr name="WaveViewType" format="integer">
+            <enum name="Circle_Type" value="1" />
+            <enum name="Rect_type" value="2" />
+        </attr>
+        <attr name="WaveSpeed" format="integer" />
+        <attr name="WaveColor" format="color" />
+        <attr name="WaveHeight" format="dimension" />
+        <attr name="PaintWidth" format="dimension" />
+        <attr name="TextSize" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="MyWaveView2">
+        <attr name="wave_color1" format="color" />
+        <attr name="wave_color2" format="color" />
+        <attr name="paint_width" format="dimension" />
+        <attr name="wave_height" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="RaderView">
+        <attr name="rader_paint_width" format="dimension" />
+        <attr name="rader_color" format="color" />
+        <attr name="rader_line_colro" format="color" />
+        <attr name="rader_circle_count" format="integer" />
+    </declare-styleable>
+
+</resources>

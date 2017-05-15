@@ -1,17 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myAttr="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.weiwei.myapplication.MainActivity">
+    android:orientation="vertical"
+    tools:context="com.weiwei.myapplication.activity.MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/bt_reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:text="重置" />
+
+    <com.weiwei.myapplication.view.widget.MyWaveView
+        android:id="@+id/mWave"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        myAttr:TextSize="16sp"
+        myAttr:WaveColor="@color/colorAccent"
+        myAttr:WaveHeight="10dp"
+
+        />
+
+    <com.weiwei.myapplication.view.widget.MyWaveView2
+        android:id="@+id/wave_shader"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/white"
+        myAttr:wave_color1="@color/colorAccent"
+        myAttr:wave_color2="@color/colorPrimary"
+        myAttr:wave_height="15dp" />
+
+    <com.weiwei.myapplication.view.widget.MyWaveView
+        android:id="@+id/rect_wave"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        myAttr:TextSize="18sp"
+        myAttr:WaveColor="@color/colorPrimaryDark"
+        myAttr:WaveViewType="Rect_type" />
+
+</LinearLayout>
